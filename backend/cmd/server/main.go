@@ -17,6 +17,7 @@ func main() {
 			log.Printf("Could not write health response: %v", err)
 		}
 	})
+	mux.Handle("/", http.FileServer(http.Dir("../frontend")))
 
 	log.Println("Go API listening at http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", mux))
@@ -35,8 +36,8 @@ func dashboardSummaryHandler(w http.ResponseWriter, r *http.Request) {
 		},
 		"attendance": map[string]int{
 			"present": 812,
-			"absent":   26,
-			"late":     12,
+			"absent":  26,
+			"late":    12,
 		},
 		"unpaidFees": map[string]any{
 			"students": 35,

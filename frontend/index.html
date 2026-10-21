@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BGPSC School Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p>Border Guard Public School and College</p>
+      <h1>Admin Dashboard</h1>
+      <p>Sylhet, Bangladesh</p>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="overview-title">
+      <h2 id="overview-title">School Overview</h2>
+      <div id="summary-cards">
+        <article><h3>Students</h3><p id="total-students">Loading...</p></article>
+        <article><h3>Teachers</h3><p id="total-teachers">Loading...</p></article>
+        <article><h3>Staff</h3><p id="total-staff">Loading...</p></article>
+        <article><h3>Classes</h3><p id="total-classes">Loading...</p></article>
+        <article><h3>Sections</h3><p id="total-sections">Loading...</p></article>
+      </div>
+    </section>
+
+    <section aria-labelledby="attendance-title">
+      <h2 id="attendance-title">Today's Attendance</h2>
+      <p>Present: <span id="attendance-present">Loading...</span></p>
+      <p>Absent: <span id="attendance-absent">Loading...</span></p>
+      <p>Late: <span id="attendance-late">Loading...</span></p>
+    </section>
+
+    <section aria-labelledby="fees-title">
+      <h2 id="fees-title">Unpaid Fees</h2>
+      <p>Students with dues: <span id="unpaid-students">Loading...</span></p>
+      <p>Amount due: <span id="unpaid-amount">Loading...</span></p>
+    </section>
+
+    <section aria-labelledby="activities-title">
+      <h2 id="activities-title">Recent Activities</h2>
+      <ul id="recent-activities">
+        <li>Loading activities...</li>
+      </ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
