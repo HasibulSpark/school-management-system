@@ -2,6 +2,12 @@
 
 A school management system built with a Go backend and an HTML, CSS, and JavaScript frontend.
 
+## 🚀 Tech Stack
+
+- **Backend:** Go (Golang)
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Database:** *Yet to be decided*
+
 ## Planned modules
 
 - Admin dashboard
