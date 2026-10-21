@@ -1,0 +1,18 @@
+﻿# Go
+/backend/bin/
+/backend/*.exe
+*.test
+*.out
+
+# Secrets and local school data
+.env
+.env.*
+!.env.example
+data/
+backend/data/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
