@@ -83,6 +83,99 @@ section p {
   line-height: 1.8;
 }
 
+.dashboard-link {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.student-page {
+  grid-template-columns: 1fr;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 7px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-grid input,
+.form-grid textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  color: #1f2937;
+  font: inherit;
+}
+
+.form-grid textarea {
+  resize: vertical;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+button {
+  margin-top: 18px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 7px;
+  color: #ffffff;
+  background: #123b2a;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+button:hover {
+  background: #0c2b1e;
+}
+
+.message {
+  min-height: 20px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.success-message {
+  color: #166534;
+}
+
+.error-message {
+  color: #b91c1c;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  color: #526158;
+  background: #f3f7f5;
+  font-size: 14px;
+}
+
 @media (max-width: 700px) {
   main {
     grid-template-columns: 1fr;
@@ -92,5 +185,9 @@ section p {
 
   header {
     padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 }
