@@ -4,50 +4,169 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BGPSC School Management System</title>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div>
-      <p>Border Guard Public School and College</p>
-      <h1>Admin Dashboard</h1>
-      <p>Sylhet, Bangladesh</p>
-      <p><a href="students.html" class="dashboard-link">Student Management</a></p>
-    </div>
-  </header>
+<body class="dashboard-page">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="/">
+        <span class="brand-mark">B</span>
+        <span>
+          <strong>BGPSC</strong>
+          <small>School Management</small>
+        </span>
+      </a>
 
-  <main>
-    <section aria-labelledby="overview-title">
-      <h2 id="overview-title">School Overview</h2>
-      <div id="summary-cards">
-        <article><h3>Students</h3><p id="total-students">Loading...</p></article>
-        <article><h3>Teachers</h3><p id="total-teachers">Loading...</p></article>
-        <article><h3>Staff</h3><p id="total-staff">Loading...</p></article>
-        <article><h3>Classes</h3><p id="total-classes">Loading...</p></article>
-        <article><h3>Sections</h3><p id="total-sections">Loading...</p></article>
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <a class="nav-item active" href="/">
+          <span>⌂</span>
+          Dashboard
+        </a>
+        <a class="nav-item" href="students.html">
+          <span>♙</span>
+          Students
+        </a>
+        <span class="nav-item disabled"><span>♧</span>Teachers</span>
+        <span class="nav-item disabled"><span>✓</span>Attendance</span>
+        <span class="nav-item disabled"><span>▣</span>Examinations</span>
+        <span class="nav-item disabled"><span>৳</span>Fees</span>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p>Border Guard Public School and College</p>
+        <small>Sylhet, Bangladesh</small>
       </div>
-    </section>
+    </aside>
 
-    <section aria-labelledby="attendance-title">
-      <h2 id="attendance-title">Today's Attendance</h2>
-      <p>Present: <span id="attendance-present">Loading...</span></p>
-      <p>Absent: <span id="attendance-absent">Loading...</span></p>
-      <p>Late: <span id="attendance-late">Loading...</span></p>
-    </section>
+    <div class="page-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">School Administration</p>
+          <h1>Admin Dashboard</h1>
+          <p class="header-subtitle">Welcome back. Here is today’s school overview.</p>
+        </div>
 
-    <section aria-labelledby="fees-title">
-      <h2 id="fees-title">Unpaid Fees</h2>
-      <p>Students with dues: <span id="unpaid-students">Loading...</span></p>
-      <p>Amount due: <span id="unpaid-amount">Loading...</span></p>
-    </section>
+        <a class="student-button" href="students.html">+ Register Student</a>
+      </header>
 
-    <section aria-labelledby="activities-title">
-      <h2 id="activities-title">Recent Activities</h2>
-      <ul id="recent-activities">
-        <li>Loading activities...</li>
-      </ul>
-    </section>
-  </main>
+      <main class="dashboard-main">
+        <section class="welcome-card">
+          <div>
+            <p class="welcome-label">GOOD MORNING, ADMIN</p>
+            <h2>Manage your school from one place.</h2>
+            <p>Track students, attendance, fees, and recent activities with ease.</p>
+          </div>
+          <div class="welcome-icon" aria-hidden="true">🎓</div>
+        </section>
+
+        <section aria-labelledby="overview-title">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">OVERVIEW</p>
+              <h2 id="overview-title">School at a Glance</h2>
+            </div>
+          </div>
+
+          <div id="summary-cards" class="summary-grid">
+            <article class="stat-card students-card">
+              <span class="stat-icon">♙</span>
+              <div>
+                <h3>Total Students</h3>
+                <p id="total-students">Loading...</p>
+              </div>
+            </article>
+
+            <article class="stat-card teachers-card">
+              <span class="stat-icon">♧</span>
+              <div>
+                <h3>Total Teachers</h3>
+                <p id="total-teachers">Loading...</p>
+              </div>
+            </article>
+
+            <article class="stat-card staff-card">
+              <span class="stat-icon">♜</span>
+              <div>
+                <h3>Total Staff</h3>
+                <p id="total-staff">Loading...</p>
+              </div>
+            </article>
+
+            <article class="stat-card classes-card">
+              <span class="stat-icon">▦</span>
+              <div>
+                <h3>Classes</h3>
+                <p id="total-classes">Loading...</p>
+              </div>
+            </article>
+
+            <article class="stat-card sections-card">
+              <span class="stat-icon">▤</span>
+              <div>
+                <h3>Sections</h3>
+                <p id="total-sections">Loading...</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <div class="dashboard-details">
+          <section class="panel attendance-panel" aria-labelledby="attendance-title">
+            <div class="panel-heading">
+              <div>
+                <p class="section-kicker">TODAY</p>
+                <h2 id="attendance-title">Attendance</h2>
+              </div>
+              <span class="panel-icon">✓</span>
+            </div>
+
+            <div class="attendance-chart">
+              <div class="attendance-number">
+                <strong id="attendance-present">Loading...</strong>
+                <span>Present</span>
+              </div>
+
+              <div class="attendance-summary">
+                <p><span class="status-dot absent-dot"></span>Absent <strong id="attendance-absent">Loading...</strong></p>
+                <p><span class="status-dot late-dot"></span>Late <strong id="attendance-late">Loading...</strong></p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel fees-panel" aria-labelledby="fees-title">
+            <div class="panel-heading">
+              <div>
+                <p class="section-kicker">FINANCE</p>
+                <h2 id="fees-title">Unpaid Fees</h2>
+              </div>
+              <span class="panel-icon">৳</span>
+            </div>
+
+            <div class="fee-amount">
+              <span id="unpaid-amount">Loading...</span>
+              <small>Total outstanding amount</small>
+            </div>
+
+            <p class="due-students"><strong id="unpaid-students">Loading...</strong> students have outstanding fees.</p>
+          </section>
+        </div>
+
+        <section class="panel activities-panel" aria-labelledby="activities-title">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">LATEST UPDATES</p>
+              <h2 id="activities-title">Recent Activities</h2>
+            </div>
+          </div>
+
+          <ul id="recent-activities" class="activities-list">
+            <li>Loading activities...</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
