@@ -679,3 +679,43 @@ th {
     padding: 0 14px;
   }
 }
+.form-grid select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  color: #1f2937;
+  background: #ffffff;
+  font: inherit;
+}
+
+.form-grid select:focus {
+  border-color: #16835a;
+  outline: 3px solid rgb(22 131 90 / 15%);
+}
+
+.attendance-status {
+  display: inline-block;
+  min-width: 72px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.attendance-status.present {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.attendance-status.absent {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.attendance-status.late {
+  color: #a16207;
+  background: #fef3c7;
+}
